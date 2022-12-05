@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **MY WEBSITE**
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Description](#description)
+- [Links](#links)
+- [Visuals](#visuals)
+- [Questions](#questions)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This is a Nextjs / Notion API powered website to let you know who I am and how to connect with me. It is a small snippet into my life and work. You'll see an About that lets you know who I am and what I do. You'll also find other sections with links to a few of my recent projects, both for songs and software related projects. You'll see my contact information with links to my GitHub, LinkedIn, etc. accounts, as well as a form to input your name, email, and send me a personal message.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Links
 
-## Learn More
+[Link to My Website]()
 
-To learn more about Next.js, take a look at the following resources:
+[Link to GitHub](https://github.com/mattholtmoore/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Visuals
 
-## Deploy on Vercel
+![placeholder]()
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Questions
+
+If you have any questions at all, please email me at: mattholtmoore@gmail.com
+
+You can also find me on GitHub at: https://www.github.com/mattholtmoore
