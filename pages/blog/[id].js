@@ -4,6 +4,10 @@ import { getDatabase, getPage, getBlocks } from "../../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index";
 import styles from "../post.module.css";
+import { Button, Container, IconButton, Typography } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { Stack } from "@mui/system";
+import { PraiseGodColors } from "../../styles/colors";
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -145,10 +149,11 @@ const renderBlock = (block) => {
     case "bookmark":
       const href = value.url;
       return (
-        <a href={href} target="_brank" className={styles.bookmark}>
+        <a href={href} target="_blank" className={styles.bookmark}>
           {href}
         </a>
       );
+
     default:
       return `❌ Unsupported block (${
         type === "unsupported" ? "unsupported by Notion API" : type
@@ -167,19 +172,38 @@ export default function Post({ page, blocks }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <article className={styles.container}>
-        <h1 className={styles.name}>
+      <Container
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <Typography variant="h4" component={"h1"}>
           <Text text={page.properties.Name.title} />
-        </h1>
-        <section>
-          {blocks.map((block) => (
-            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
-          ))}
-          <Link href="/blog" className={styles.back}>
-            ← Go back
-          </Link>
-        </section>
-      </article>
+        </Typography>
+        {blocks.map((block) => (
+          <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+        ))}
+
+        <Button
+          variant="contained"
+          href="/blog"
+          sx={{
+            mt: 2,
+            padding: 1,
+            color: PraiseGodColors.White,
+            backgroundColor: PraiseGodColors.WarmOrangeLight,
+            "&:hover": {
+              backgroundColor: PraiseGodColors.WarmOrangeMedium,
+            },
+          }}
+        >
+          <ArrowBack /> Go back
+        </Button>
+      </Container>
     </div>
   );
 }

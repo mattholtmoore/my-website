@@ -37,8 +37,9 @@ export default function ScrollButton() {
             boxShadow: "0px 0px 5px 0px rgba(0,0,0,1)",
           },
         }}
+        onClick={scrollToTop}
       >
-        <ArrowCircleUp onClick={scrollToTop} style={{ fontSize: "1.5rem" }} />
+        <ArrowCircleUp style={{ fontSize: "1.5rem" }} />
       </IconButton>
     </Tooltip>
   );
