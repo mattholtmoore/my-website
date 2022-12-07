@@ -3,10 +3,12 @@ import React from "react";
 import { PraiseGodColors } from "../styles/colors";
 import {
   Email,
+  Facebook,
   GitHub,
   Instagram,
   LinkedIn,
   PhoneIphone,
+  Twitter,
 } from "@mui/icons-material";
 import ScrollButton from "./ScrollButton";
 
@@ -91,6 +93,32 @@ const Footer = () => {
               }}
             >
               <Instagram />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Twitter" placement="top">
+            <IconButton
+              href="https://twitter.com/mattholtmoore"
+              target="_blank"
+              sx={{
+                color: PraiseGodColors.BlackSemiTransparent87,
+                fontSize: "1.5rem",
+                ":hover": { color: PraiseGodColors.WarmOrangeLight },
+              }}
+            >
+              <Twitter />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Facebook" placement="top">
+            <IconButton
+              href="https://www.facebook.com/mattholtmoore/"
+              target="_blank"
+              sx={{
+                color: PraiseGodColors.BlackSemiTransparent87,
+                fontSize: "1.5rem",
+                ":hover": { color: PraiseGodColors.WarmOrangeLight },
+              }}
+            >
+              <Facebook />
             </IconButton>
           </Tooltip>
           <ScrollButton />
