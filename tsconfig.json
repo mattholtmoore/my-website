@@ -19,7 +19,7 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/notion_api.js", "pages/blog/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/notion.js", "pages/blog/index.tsx"],
   "exclude": [
     "node_modules"
   ]
