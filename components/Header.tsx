@@ -39,30 +39,10 @@ const Header = () => {
           />
         </Link>
         <Stack direction="row" spacing={2} alignItems="center">
-          <NavBarButton
-            text="home"
-            onClick={() => {
-              router.push("/");
-            }}
-          />
-          <NavBarButton
-            text="about"
-            onClick={() => {
-              router.push("/about");
-            }}
-          />
-          <NavBarButton
-            text="music"
-            onClick={() => {
-              router.push("/music");
-            }}
-          />
-          <NavBarButton
-            text="blog"
-            onClick={() => {
-              router.push("/blog");
-            }}
-          />
+          <NavBarButton text="home" onClick={() => router.push("/")} />
+          <NavBarButton text="about" onClick={() => router.push("/about")} />
+          <NavBarButton text="music" onClick={() => router.push("/music")} />
+          <NavBarButton text="blog" onClick={() => router.push("/blog")} />
 
           <Button
             sx={{
