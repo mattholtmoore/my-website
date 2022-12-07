@@ -225,7 +225,7 @@ export const getStaticProps = async (context) => {
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
   const childBlocks = await Promise.all(
     blocks
-      .filter((block) => block.has_children)
+      .filter((block) => (block as any).has_children)
       .map(async (block) => {
         return {
           id: block.id,
@@ -235,8 +235,8 @@ export const getStaticProps = async (context) => {
   );
   const blocksWithChildren = blocks.map((block) => {
     // Add child blocks if the block should contain children but none exists
-    if (block.has_children && !block[block.type].children) {
-      block[block.type]["children"] = childBlocks.find(
+    if ((block as any).has_children && !block[(block as any).type].children) {
+      block[(block as any).type]["children"] = childBlocks.find(
         (x) => x.id === block.id
       )?.children;
     }
