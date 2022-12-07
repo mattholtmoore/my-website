@@ -195,13 +195,23 @@ export default function Blog({ posts }) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const database = await getDatabase(databaseId);
-
   return {
     props: {
       posts: database,
     },
     revalidate: 1,
   };
-};
+}
+
+// export const getStaticProps = async () => {
+//   const database = await getDatabase(databaseId);
+
+//   return {
+//     props: {
+//       posts: database,
+//     },
+//     // revalidate: 1,
+//   };
+// };
