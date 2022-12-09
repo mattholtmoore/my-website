@@ -201,6 +201,12 @@ function Form() {
           </Stack>
           <Button
             type="submit"
+            // When the button is clicked, user will be directed to send an email to my personal email address
+            onClick={() =>
+              window.open(
+                `mailto:mattholtmoore@gmail.com?subject=Message from ${name}&body=${message} - ${email}`
+              )
+            }
             sx={{
               fontFamily: "Roboto",
               fontSize: "17px",

@@ -39,7 +39,7 @@ const About = () => {
             <Image
               loader={({ src }) => src}
               src="/images/WebsiteProfilePhoto.jpg"
-              alt="Matt's profile photo"
+              alt="Matt Moore - Elevation Worship photo"
               width={600}
               height={400}
             />

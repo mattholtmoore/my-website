@@ -4,9 +4,8 @@ import { getDatabase, getPage, getBlocks } from "../../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index";
 import styles from "../post.module.css";
-import { Button, Container, IconButton, Typography } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
-import { Stack } from "@mui/system";
 import { PraiseGodColors } from "../../styles/colors";
 
 export const Text = ({ text }) => {
@@ -166,13 +165,14 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
-    <div>
+    <>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Container
+        className={styles.container}
         sx={{
           justifyContent: "center",
           alignItems: "center",
@@ -181,7 +181,7 @@ export default function Post({ page, blocks }) {
           minHeight: "100vh",
         }}
       >
-        <Typography variant="h4" component={"h1"}>
+        <Typography variant="h4" component={"h1"} className={styles.name}>
           <Text text={page.properties.Name.title} />
         </Typography>
         {blocks.map((block) => (
@@ -204,7 +204,7 @@ export default function Post({ page, blocks }) {
           <ArrowBack /> Go back
         </Button>
       </Container>
-    </div>
+    </>
   );
 }
 
