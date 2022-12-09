@@ -256,7 +256,7 @@ import React from "react";
 import styles from "../post.module.css";
 import { Fragment } from "react";
 import Head from "next/head";
-import { getDatabase, getPage, getBlocks } from "../../Lib/notion_api";
+import { getDatabase, getPage, getBlocks } from "../../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index";
 
