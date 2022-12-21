@@ -1,15 +1,16 @@
-import { IconButton, Stack, Typography, Tooltip } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
 import React from "react";
 import { PraiseGodColors } from "../styles/colors";
-import {
-  Email,
-  Facebook,
-  GitHub,
-  Instagram,
-  LinkedIn,
-  PhoneIphone,
-  Twitter,
-} from "@mui/icons-material";
+import Email from "@mui/icons-material/Email";
+import Facebook from "@mui/icons-material/Facebook";
+import GitHub from "@mui/icons-material/GitHub";
+import Instagram from "@mui/icons-material/Instagram";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import PhoneIphone from "@mui/icons-material/PhoneIphone";
+import Twitter from "@mui/icons-material/Twitter";
 import ScrollButton from "./ScrollButton";
 
 const Footer = () => {

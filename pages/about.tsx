@@ -58,7 +58,10 @@ const About = () => {
             <Link
               href="https://www.servant.io/"
               target={"_blank"}
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                color: "#f00000",
+              }}
             >
               Servant
             </Link>{" "}
@@ -70,7 +73,10 @@ const About = () => {
             <Link
               href="https://www.pangea.io/"
               target={"_blank"}
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                color: PraiseGodColors.WarmOrangeMedium,
+              }}
             >
               Pangea
             </Link>{" "}
@@ -81,7 +87,7 @@ const About = () => {
             <Link
               href="https://loveology.org/"
               target={"_blank"}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", color: "#F61A3A" }}
             >
               Loveology
             </Link>{" "}

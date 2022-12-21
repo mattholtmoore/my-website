@@ -1,7 +1,8 @@
-import { Stack, Typography } from "@mui/material";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import React from "react";
-import { PlayArrow } from "@mui/icons-material";
+import PlayArrow from "@mui/icons-material/PlayArrow";
 
 const Music = () => {
   return (

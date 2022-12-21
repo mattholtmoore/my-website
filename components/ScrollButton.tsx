@@ -1,6 +1,7 @@
 // import React, { useState } from "react";
-import { IconButton, Tooltip } from "@mui/material";
-import { ArrowCircleUp } from "@mui/icons-material";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import ArrowCircleUp from "@mui/icons-material/ArrowCircleUp";
 import { PraiseGodColors } from "../styles/colors";
 
 import React, { useEffect } from "react";
