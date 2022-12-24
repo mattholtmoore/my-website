@@ -28,7 +28,7 @@ const Footer = () => {
         alignItems: "center",
       }}
     >
-      <Stack direction="column">
+      <Stack direction="column" alignItems="center">
         <Stack
           direction="row"
           alignItems="center"
@@ -124,15 +124,13 @@ const Footer = () => {
           </Tooltip>
           <ScrollButton />
         </Stack>
-        <Stack justifyContent="center">
+        <Stack display={"inline-block"}>
           <Typography
             variant="body2"
             component="span"
             sx={{
               fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
               color: PraiseGodColors.BlackSemiTransparent87,
-              justifyContent: "center",
-              alignItems: "center",
               fontSize: "0.75rem",
               padding: "0.5rem",
             }}

@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import { PraiseGodColors } from "../../styles/colors";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import SearchOutlined from "@mui/icons-material/SearchOutlined";
+import { Button } from "@mui/material";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -170,16 +171,23 @@ const Blog = ({ posts }) => {
                       fontFamily: "Roboto",
                     }}
                   >
-                    <Link
+                    <Button
                       href={`blog/${post.id}`}
-                      style={{
-                        color: PraiseGodColors.BlackSemiTransparent38,
+                      sx={{
+                        color: PraiseGodColors.White,
+                        backgroundColor: PraiseGodColors.WarmOrangeLighter,
+                        mt: 2,
                         textDecoration: "none",
+                        textTransform: "lowercase",
                         fontFamily: "Roboto",
+                        ":hover": {
+                          backgroundColor: PraiseGodColors.WarmOrangeMedium,
+                          animation: "ease-in-out 0.3s",
+                        },
                       }}
                     >
                       Read post <ArrowForward />
-                    </Link>
+                    </Button>
                   </Typography>
                 </Card>
               </li>

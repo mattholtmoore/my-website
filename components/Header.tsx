@@ -1,7 +1,8 @@
-import { Button } from "@mui/joy";
-import { AppBar, Avatar, Toolbar } from "@mui/material";
-import { Stack } from "@mui/system";
-import Image from "next/image";
+import Button from "@mui/joy/Button";
+import AppBar from "@mui/material/AppBar";
+import Avatar from "@mui/material/Avatar";
+import Toolbar from "@mui/material/Toolbar";
+import Stack from "@mui/material/Stack";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PraiseGodColors } from "../styles/colors";

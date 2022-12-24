@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import React from "react";
 import { PraiseGodColors } from "../styles/colors";
 
@@ -20,7 +20,6 @@ const NavBarButton = ({ text, onClick }: INavBarButtonsProps): JSX.Element => {
           color: PraiseGodColors.WarmOrangeLight,
           backgroundColor: "transparent",
           textDecoration: "underline",
-          // make text lowercase
         },
       }}
       onClick={onClick}

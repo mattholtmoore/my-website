@@ -18,7 +18,10 @@ const Music = () => {
           </Typography>
           <Stack direction={"row"} spacing={2} alignItems="center">
             <PlayArrow />
-            <Link href="https://open.spotify.com/album/4fQCM7Rr4nLXxNuNjbO042">
+            <Link
+              href="https://open.spotify.com/album/4fQCM7Rr4nLXxNuNjbO042"
+              target={"_blank"}
+            >
               Life To Me
             </Link>
           </Stack>

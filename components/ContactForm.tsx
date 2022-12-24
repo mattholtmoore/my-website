@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { validateEmail } from "../utils/utils";
-import {
-  FormControl,
-  FormHelperText,
-  OutlinedInput,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { Button } from "@mui/joy";
+import Stack from "@mui/material/Stack";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Typography from "@mui/material/Typography";
+import FormControl from "@mui/material/FormControl";
+import FormHelperText from "@mui/material/FormHelperText";
+import Button from "@mui/joy/Button";
 import { PraiseGodColors } from "../styles/colors";
 import Head from "next/head";
 
@@ -35,7 +33,7 @@ function Form() {
     e.preventDefault();
 
     if (!validateEmail(email) || !name) {
-      setErrorMessage("*Email or Name is invalid. Please try again. Thanks!");
+      setErrorMessage("*Invalid entry. Please try again. Thanks!");
       return;
     } else {
       setErrorMessage("");
@@ -140,43 +138,12 @@ function Form() {
                   color: PraiseGodColors.WarmOrangeLight,
                 }}
               >
-                What's your email?
-              </FormHelperText>
-              <OutlinedInput
-                id="my-input"
-                value={email}
-                onChange={handleInputChange}
-                name="email"
-                type="email"
-                placeholder="Email"
-                aria-describedby="my-helper-text"
-                sx={{
-                  display: "block",
-                  mt: "5px",
-                  mb: "5px",
-                  width: "100%",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  fontFamily: "Roboto",
-                  color: PraiseGodColors.BlackSemiTransparent87,
-                  backgroundColor: PraiseGodColors.White,
-                }}
-              />
-            </Stack>
-            <Stack direction={"column"}>
-              <FormHelperText
-                id="my-helper-text"
-                sx={{
-                  fontFamily: "Roboto",
-                  fontSize: "17px",
-                  pt: "10px",
-                  color: PraiseGodColors.WarmOrangeLight,
-                }}
-              >
                 What's your message?
               </FormHelperText>
               <OutlinedInput
+                multiline
+                fullWidth
+                maxRows={4}
                 id="my-input"
                 value={message}
                 onChange={handleInputChange}
@@ -184,6 +151,7 @@ function Form() {
                 type="text"
                 placeholder="Message"
                 aria-describedby="my-helper-text"
+                inputProps={{ maxLength: 2000 }}
                 sx={{
                   display: "block",
                   mt: "5px",
@@ -199,33 +167,34 @@ function Form() {
               />
             </Stack>
           </Stack>
-          <Button
-            type="submit"
-            // When the button is clicked, user will be directed to send an email to my personal email address
-            onClick={() =>
-              window.open(
-                `mailto:mattholtmoore@gmail.com?subject=Message from ${name}&body=${message} - ${email}`
-              )
-            }
-            sx={{
-              fontFamily: "Roboto",
-              fontSize: "17px",
-              color: PraiseGodColors.BlackSemiTransparent87,
-              backgroundColor: PraiseGodColors.White,
-              borderRadius: 0,
-              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
-              width: "25%",
-              mt: "50px",
-              mb: "30px",
-              "&:hover": {
-                backgroundColor: PraiseGodColors.WarmOrangeLight,
-              },
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            Submit
-          </Button>
+          <Stack direction={"row"} width={"75%"}>
+            <Button
+              type="submit"
+              onClick={() =>
+                window.open(
+                  `mailto:mattholtmoore@gmail.com?subject=Message from ${name}&body=${message}`
+                )
+              }
+              sx={{
+                fontFamily: "Roboto",
+                fontSize: "17px",
+                color: PraiseGodColors.BlackSemiTransparent87,
+                backgroundColor: PraiseGodColors.White,
+                borderRadius: 20,
+                boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+                width: "25%",
+                mt: "50px",
+                mb: "30px",
+                "&:hover": {
+                  backgroundColor: PraiseGodColors.WarmOrangeLight,
+                },
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Submit
+            </Button>
+          </Stack>
         </FormControl>
       </Stack>
       <Stack direction="column" alignItems={"center"} marginBottom={"24px"}>

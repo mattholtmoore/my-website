@@ -1,10 +1,8 @@
-// import React, { useState } from "react";
+import React, { useEffect } from "react";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import ArrowCircleUp from "@mui/icons-material/ArrowCircleUp";
 import { PraiseGodColors } from "../styles/colors";
-
-import React, { useEffect } from "react";
 
 export default function ScrollButton() {
   useEffect(function mount() {
